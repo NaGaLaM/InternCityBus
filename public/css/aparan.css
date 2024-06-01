@@ -1,0 +1,98 @@
+.st_cnt {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100px;
+    position: relative;
+}
+
+.status {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.st_cnt::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 220px;
+    height: 7px;
+    background: rgb(141, 198, 255);
+    border-radius: 0 0 3mm 3mm;
+    border-top: 0.3mm solid rgb(180, 180, 180);
+}
+
+.item {
+    font-size: 12px;
+    position: relative;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translate(0, -50%);
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    outline: 0.2mm solid rgb(120, 120, 120);
+    border-radius: 0.3mm;
+}
+
+.item:nth-child(2)::before {
+    background: rgb(180, 180, 180);
+    outline: none;
+}
+
+.item:nth-child(3)::before {
+    background: rgb(28, 185, 120);
+    outline: none;
+}
+
+
+
+.all-st_cnt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: absolute;
+    grid-gap: 15px;
+    z-index: 2;
+    margin-left: -50px;
+    margin-top: 15px;
+}
+
+.seat {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 0.5mm;
+    outline: 0.3mm solid rgb(180, 180, 180);
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.all-st_cnt input:checked+label {
+    background: rgb(28, 185, 120);
+    outline: none;
+}
+
+.seat.bkd_seat {
+    background: rgb(180, 180, 180);
+    outline: none;
+}
+
+.mikro {
+    position: relative;
+    rotate: 90deg;
+    width: auto;
+    height: 300px;
+    z-index: 1;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>InternCityBus - Արմավիր</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/armavir.css" rel="stylesheet">
+    <link href="css/payment.css" rel="stylesheet">
+    <link href="css/ticket.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="text-primary m-0"></i>InternCityBus</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Գլխավոր</a>
+                    <a href="about.html" class="nav-item nav-link ">Մեր մասին</a>
+                    <a href="contact.html" class="nav-item nav-link">Հետադարձ կապ</a>
+                </div>
+                <a href="./login.html" class="btn btn-primary rounded-pill py-2 px-4">Մուտք</a>
+            </div>
+        </nav>
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- card Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="toms">
+                <div class="toms_slt">
+                    <div class="head">
+                        <div class="title">Armavir Transit</div>
+                    </div>
+                    <div class="st_cnt">
+                        <div class="status">
+                            <div class="item" id="arka">Առկա</div>
+                            <div class="item" id="amragrvats">Ամրագրված</div>
+                            <div class="item">Ընտրված</div>
+                        </div>
+                        <div class="all-st_cnt">
+
+                        </div>
+                        <img src="./img/autobus.png" alt="" class="bus">
+                        <div class="hdn_box" id="hdn_box">
+                            <form class="form">
+                                <button type="button" class="button1" onclick=cs()>
+                                    X
+                                </button>
+                                <div class="pmt_way">
+                                    <button name="paypal" type="button">
+                                        <img src="./img/paypal.png" alt="paypal_logo">
+                                    </button>
+                                    <button name="apple-pay" type="button">
+                                        <img src="./img/apple.png" alt="">
+                                    </button>
+                                    <button name="google-pay" type="button">
+                                        <img src="./img/google.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="separator">
+                                    <hr class="line">
+                                    <p>կամ վճարել քարտի միջոցով</p>
+                                    <hr class="line">
+                                </div>
+                                <div class="form_card">
+                                    <div class="inp_box">
+                                        <label for="pwd_fld" class="inp_lbl">Անուն Ազգանուն</label>
+                                        <input id="pwd_fld1" class="inp_fld" type="text" name="input-name"
+                                            title="Inpit title" placeholder="Գրեք Ձեր անուն ազգանուն" required>
+                                    </div>
+                                    <div class="inp_box">
+                                        <label for="pwd_fld" class="inp_lbl">Քարտի Համար</label>
+                                        <input id="pwd_fld" class="inp_fld" type="number" name="input-name"
+                                            title="Inpit title" placeholder="0000 0000 0000 0000" required>
+                                    </div>
+                                    <div class="inp_box">
+                                        <label for="pwd_fld" class="inp_lbl">Էլ․հասցե</label>
+                                        <input id="pwd_fld2" class="inp_fld" type="email" name="input-name"
+                                            title="Inpit title" placeholder="example@gmail.com" required>
+                                    </div>
+                                    <div class="inp_box">
+                                        <label for="pwd_fld" class="inp_lbl">ամիս,ամսաթիվ / CVV</label>
+                                        <div class="split">
+                                            <input id="pwd_fld" class="inp_fld" type="text" name="input-name"
+                                                title="Expiry Date" placeholder="01/23" required>
+                                            <input id="pwd_fld" class="inp_fld" type="number" name="cvv" title="CVV"
+                                                placeholder="CVV" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" onclick=pay() class="btn_prch">Վճարել</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="timings">
+                        <div class="dates">
+                        </div>
+                        <div class="times">
+                            <input type="time" id="timeInput" name="timeInput" step="600">
+                        </div>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="total">
+                        <span> <span class="count">0 </span> հատ </span>
+                        <div class="amount" id="amount">0 ֏</div>
+                        <div class="amount1" id="amount1">0 ֏</div>
+                    </div>
+                    <button type="button" onclick=checkout()>Ամրագրել</button>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h1 class="mb-4"><span class="text-primary" id="ctn">Երևան - Արմավիր</span></h1>
+                <p class="mb-4">
+                    Ուղղություննե և կանգառներ - Երևան, Կիլիկիա ավտոկայան Արմավիր, ավտոկայան <br>
+                    Երթուղային - 207 Երթի<br>
+                    տևողությունը - 1ժ 00րոպե<br>
+                    Փոխադրողը - National Transport Authority <br>
+                    Գինը - <span id="gin">350</span> դրամ <br>
+                    Երկուշաբթի-Կիրակի <br>
+                    Ժամային գրաֆիկ<br>
+                    ժ/րոպե<br>
+                    7| 10 20 30 40 50 <br>
+                    8| 00 10 20 30 40 <br>
+                    9|10 20 30 40 <br>
+                    10|10 20 30 40 <br>
+                    11|10 20 30 40 <br>
+                    12|10 20 30 40 50 <br>
+                    13|00 10 20 30 40 <br>
+                    14|00 20 30 40 <br>
+                    15|10 20 30 40 <br>
+                    16|10 20 30 40 <br>
+                    17|10 20 30 40 50 <br>
+                    18|00 10 20 30 40 50 <br>
+                    19|00 10 20 30 40 50 <br>
+                    20|00 10 20 30 40 50 <br>
+                    21|00 10 20 30 40 <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- card End -->
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Հետադարձ կապ</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Yerevan, Armenia</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+374 98326035</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>interncitybus@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.facebook.com/profile.php?id=100083357985878&mibextid=LQQJ4d"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.instagram.com/armintercitybus?igsh=MTB2eTB6OTAzN25laA%3D%3D&utm_source=qr"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Բաժանորդագրվել</h4>
+                    <p>Մեր նորություններին հետևելու համար գրեք Ձեր Էլ․հասցեն</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="էլ․հասցե">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Գրանցվել</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+
+        <!-- Template Javascript -->
+        <script src="./js/card.js"></script>
+        <script src="./js/ticket.js"></script>
+        <script src="./js/armavirTicketHandler.js"></script>
+
+</body>
+
+</html>
